@@ -1,0 +1,724 @@
+---
+title: "Policy Learning and Information Processing"
+author:
+- name: Matthew C. Nowlin
+  affiliation: Department of Political Science
+  affiliation2: College of Charleston 
+  email: nowlinmc@cofc.edu
+date: July 2017
+bibliography: ~/Dropbox/refs.bib
+csl: american-political-science-association.csl
+conference: A previous version of this paper was presented at the Annual Meeting of the American Political Science Association in September 2016. Special thanks to Deserai Crow and Tom Birkland for their comments. 
+output:
+  pdf_document:
+    keep_tex: yes
+    template: ~/Dropbox/Manuscripts/article.latex
+...
+
+<!-- Learning involves the reassignment of probabilities that something is true in light of new information   
+   - Bayesian learning as baseline 
+   - Move from baseline because of core values and limited attention; strong vs weak priors-likelihood function and attention; plus heuristics (e.g., anchoring)
+   - Simulations of posterior with different priors and likelihoods
+   - Data analysis using 2002 NW data (ANS conf paper) -->
+
+\begin{abstract}
+\noindent Policy learning is an important concept in the study of
+  policymaking, yet it is difficult to model and empirically
+  estimate. This manuscript proposes that a Bayesian learning
+  framework--with completely rational Bayesian updating--can serve asa
+  baseline approach to model policy learning. Policy learning through
+  Bayesian updating occurs as individuals adjust their prior beliefs
+  in light of new information. Drawing on the policy process work of
+  the advocacy coalition framework and the theory of disproportionate
+  information processing in addition to work on heuristics and bias,
+  this manuscript explores how policy actors deviate from Bayesian updating and the conditions that make these deviations more (or less) likely. In the approach posited here, learning is a function of the strength of prior beliefs and the weight given to new information. Finally, this manuscript demonstrates the applicability of this approach using public opinion data regarding Yucca Mountain, a proposed repository site for nuclear waste.
+\end{abstract}
+
+# Introduction
+
+Information and policy learning are key components of the policymaking
+process. Policy learning is often discussed as a catalyst for policy
+change and as part of the process of policy diffusion. Additionally,
+learning is thought to occur from the use of science and scientific
+information, policy analysis, policy evaluation, and policy failure
+[@jenkins-smith_dynamics_1993; @may_policy_1992; @james_policy_2009]. Despite
+the various discussions of policy learning, there is little agreement
+among scholars on how it should be defined and empirically measured. 
+
+<!-- Policy learning occurs at the individual and organizational level -->
+
+The advocacy coalition framework (ACF) is the only leading theory of
+the policy process that explicitly takes policy learning into account
+as a driver of policy change. The ACF posits that
+learning is denoted by changes in policy related beliefs, and
+specifically defines _policy-orientated learning_ as "relative
+enduring alterations of thought or behavioral intentions that result
+from experience and which are concerned with the attainment or
+revision of the precepts of the belief systems of individuals or
+collective" [@sabatier_policy_1993, 42]. In addition to policy
+learning, the ACF also highlights the importance of information--
+particularly scientific and technical information, as well as
+information produced through policy analysis--in the policymaking
+process. 
+
+Apart from the ACF, scholars have extended Punctuated Equilibrium
+Theory (PET) to a more generalized approach that examines information
+processing in policymaking [@jones_there_2012]. In this approach,
+information is defined as "signals" from the policymaking
+environment and information processing is the detection, collection,
+and interpretations of those signals [@jones_politics_2005]. The
+nature of these signals tend to be _entropic_--coming from multiple
+sources focused on defining policy problems in a certain way--or
+_expert_ information that is geared toward solving policy problems
+[@baumgartner_politics_2015]. One of the key insights of this work is that
+information is processed in a disproportionate manner, with some signals
+tended to as others are ignored. Despite their covering similar
+themes, little work has tried to integrate the policy-orientated
+learning of the ACF with the information processing perspective of
+PET. 
+
+In this paper, I develop a logic of policy learning and information
+processing in the policymaking process. This logic is based in a
+Bayesian framework and uses notions of information as signals and
+policy learning as changes in beliefs. Specially, learning occurs when
+a prior belief is significantly shifted as a result of the processing
+of signals. This logic is demonstrated using public opinion data from 2002
+regarding Yucca Mountain, a proposed nuclear waste facility in the
+US. 
+
+# A Logic of Policy Learning
+
+Policy learning is defined as a change in beliefs as a result of the
+processing of information, where beliefs change in the
+direction of the information. This notion of policy learning is built on
+the ACF, which posits a three-tiered organization of policy
+beliefs. Policy beliefs are hierarchically structured and anchored by
+a deep core set of beliefs, such as political ideology, that are
+steeped in normative assumptions and span multiple policy areas
+[@ripberger_cultural_2014]. Following deep core beliefs are policy
+core beliefs, which are beliefs associated with the characteristics of
+particular policy issues, (e.g., climate change is man-made). Finally,
+secondary beliefs are constrained by both deep core and policy core
+beliefs and are focused on a set of narrow concerns within a policy
+domain (e.g., levels of budget authority). Learning occurs when one or
+more of these beliefs change, with secondary beliefs the most likely to change,
+followed by policy core, and finally deep core beliefs are the most resisted to change. 
+
+In addition to belief systems and learning, the ACF also includes a
+model of the individual that posits that individuals are boundedly
+rational and biased when processing information
+[@sabatier_advocacy_2007]. 
+Bias information processing involves the rejection of information that
+does comport with an individuals current beliefs, and/or selective
+information search where only information that confirms current
+beliefs is sought. Deep core beliefs typically act as the filter
+through which information is processed [@kahan_cultural_2011]. 
+
+Research on information processing, mostly drawn from
+PET, has developed separately from the ACF and belief change. This
+research finds that attention to particular information signals are
+what drive policy development and change. However, due to cognitive
+limitations, such as biased information processing and institutional
+friction, attention to information signals tends to be
+disproportionate, with some signals receive more attention that is
+warranted and other signals receiving less. I propose a model of
+policy learning that takes into account notions from the ACF about
+policy learning as well as ideas about information processing from the PET
+literature. 
+
+For information to be transferred and learning to occur there needs to
+be a _sender_ ($S$), a message, and a _receiver_ ($R$)
+[@baumgartner_politics_2015]. The messages--information--sent from $S$ to $R$ can be understood as signals and
+information processing is the "collecting, assembling, interpreting,
+and prioritizing" of those signals [@jones_politics_2005,7]. $R$
+learns when her beliefs are altered as a result of the signal. 
+
+
+There are several ways to consider modeling learning, and I begin with
+a linear model and a threshold model. Absent a bias in the way that
+the information signal is processed, $R$ would learn in a linear
+fashion, as shown in Figure \ref{fig:learnL}, where beliefs are updated in
+response to information in a consistent and proportional manner. This
+approach to learning is consistent with a comprehensively rational
+assumption regarding cognition. However, it could also be consistent
+with incrementalism if policy actors make changes from a baseline in a rational way, or a way that is consistent with
+new information [@jones_model_2005]. Figure \ref{fig:learnT}
+illustrates a threshold model, consistent with disproporiate
+information processing, where information signals are ignored until
+some threshold is reached causing positive feedback and a cascade
+effect, leading to punctuated policy change [@jones_politics_2005]. 
+
+\begin{figure}
+\centering
+\caption{Two Models of Policy Learning \label{fig:learn}}
+\begin{subfigure}[a]{0.4\textwidth}
+\caption{Linear Learning \label{fig:learnL}}
+\includegraphics[width=\textwidth]{linear.pdf}
+\end{subfigure}
+\begin{subfigure}[a]{0.4\textwidth}
+\caption{Threshold Learning \label{fig:learnT}}
+\includegraphics[width=\textwidth]{threshold.pdf}
+\end{subfigure}
+\end{figure}
+
+
+Given the bias nature of information processing, linear learning is
+likely to occur only under a limited set of conditions, such as an
+issue where deep core and policy core beliefs are not in dispute and technical
+information is readily available
+[@weible_expert-based_2008; @jenkins-smith_advocacy_2014]. The threshold
+model is likely to occur more often in contentious policy areas where 
+policy actors are resistant to change beliefs until information
+signals can no longer be ignored [@jones_politics_2005]. Both of these approaches are useful for gaining some insights into the
+learning process, however a more generalizable approach is needed. In
+the next section, I propose a Bayesian framework for policy learning
+that incorporates both the ACF approach to learning and belief systems
+as well as previous work on attention and information processing. 
+
+## A Bayesian Approach to Policy Learning 
+
+Bayesian learning occurs when an individual alters their belief in
+response to information. Individuals have beliefs about how likely
+something is to be true, and this could be denoted as _p_($\theta$),
+the probability that $\theta$ is an accurate representation of the
+world. The individual then receives some information (i.e., data),
+_I_, and determines the likelihood of that information representing the
+world if $\theta$ is true, _p_ (_I_|$\theta$). Learning occurs when
+_p_($\theta$) is updated conditional on the information
+_p_($\theta$|_I_). This process can be expressed through Bayes rules
+where the posterior, _p_($\theta$|_I_) $=$ _p_ (_I_|$\theta$)
+_p_($\theta$) $/$ p(_I_). According to Bayes' rule, _the posterior is
+proportional to the prior times the likelihood_
+[@jackman_bayesian_2009, 14]. However, as more information is
+accumulated, the impact of the prior should diminish. 
+
+Much like the comprehensively rational model, Bayesian learning is
+often seen as an ideal or baseline to measure against rather than as
+an accurate description of how individuals update beliefs
+[@bullock_partisan_2009; @bartels_beyond_2002; @tetlock_expert_2005]. In
+general, individuals are prone to multiple biases in information
+processing including "stickiness" of prior beliefs and a lack of
+updating (i.e., learning) in light of new information. However, a
+Bayesian framework can be useful for both theorizing and measuring policy learning. 
+
+Applying a Bayesian framework to policy learning entails an
+understanding of the prior belief, the likelihood function, and the
+subsequent posterior belief. Given the nature of belief systems, the prior
+beliefs could be highly resistant to change, with deep core beliefs
+being the most resistant. In addition to being resistant to change,
+deep core beliefs also constrain policy core beliefs and act as a
+cognitive filter for information processing. Therefore, deep core
+beliefs can make prior beliefs, _p_$\theta$, difficult to change. 
+
+The disproporiate nature of information processing, where some signals
+are ignored or an overreaction occurs, means that an individuals
+"likelihood function" is likely to be biased toward some signals and
+away from others. Therefore, information signals are likely
+subject to different weights, with belief confirming information
+assigned a positive weight (i.e., more likely to be true) and
+information that runs counter to beliefs being assigned a negative
+weight. The weights applied to the information signals are a function
+of prior beliefs as well as deep core beliefs [@kahan_cultural_2011]. Applying
+various weights to the information signals results in disproporiate
+processing of the information and can make learning less likely. 
+
+Posterior beliefs are a function of both prior beliefs and information
+weighting, and learning can be said to occur when there is a significant
+shift from the prior belief. Once understood in this way, policy
+learning becomes a function of the strength of the prior, the strength of the
+information signals, and how they are weighted. Four examples of the
+implications of this approach to modeling policy learning are shown in Figure \ref{fig:bayes}. 
+
+\begin{figure}
+\centering
+\caption{Bayesian Policy Learning \label{fig:bayes}}
+\begin{subfigure}[a]{0.4\textwidth}
+\caption{Weak Prior \label{fig:weakP}}
+\includegraphics[width=\textwidth]{weakP.pdf}
+\end{subfigure}
+\begin{subfigure}[b]{0.4\textwidth}
+\caption{Normal Prior \label{fig:normP}}
+\includegraphics[width=\textwidth]{normP.pdf}
+\end{subfigure}
+\begin{subfigure}[c]{0.4\textwidth}
+\caption{Strong Prior; Weak Info. Weight \label{fig:strongP1}}
+\includegraphics[width=\textwidth]{strongP1.pdf}
+\end{subfigure}
+\begin{subfigure}[d]{0.4\textwidth}
+\caption{Strong Prior; Strong Info. Weight \label{fig:strongP2}}
+\includegraphics[width=\textwidth]{strongP2.pdf}
+\end{subfigure}
+\end{figure}
+
+Figure \ref{fig:weakP} shows a scenario where an individual has no
+prior beliefs about $\theta$ and then receives some information. Under
+this scenario, the posterior beliefs are equal to the likelihood. In
+other words, posterior beliefs are only a function of the
+information. This type of learning could occur when a new issue gains
+attention and deep core beliefs provide no guidance. In such a
+scenario an individuals view of the issue is solely a function of
+the information that she receives. Another scenario is illustrated in Figure
+\ref{fig:normP}, which shows a normally distributed prior and a
+relatively strong (i.e., small variance) information weight
+(likelihood). As shown, with a normal distribution for the prior belief and
+a strong information signal, the posterior belief is more heavily
+influenced by the information than the prior. This could occur with
+secondary beliefs or other beliefs that have a "normal" degree of
+uncertainty. 
+
+The next panel, Figure \ref{fig:strongP1}, illustrates the most likely
+scenario, particularly with contentious policy issues. As shown, the
+individual has a strong prior belief and heavily discounts information
+inconstant with that prior belief. Therefore, learning--a significant
+shift from the prior--does not occur. Figure \ref{fig:strongP1} also
+accounts for the most common type of biases in updating, such as confirmation bias and motivated reasoning. 
+
+Finally, Figure \ref{fig:strongP2} illustrates a case with a strong
+prior and a strong information weight. This shows that learning can
+occur even in the face of a strong prior belief, however the
+information signal must be strong and weighted according. Such dramatic
+shifts in beliefs are likely to be rare. One example might be Alan
+Greenspan, who in an October 2008 congressional hearing following the
+housing crash admitted he may have been wrong about the importance of
+regulation. 
+
+Applying the above logic provides a model for the examination of several
+research questions and hypotheses regarding policy
+learning. Specifically, hypotheses can be generated regarding the
+specific nature of the prior beliefs, how information is weighted, and
+how strong the information signal needs to be with respect to the strength of
+the prior for learning to occur. The next section applies the model
+using public opinion about Yucca Mountain as a potential site for a
+nuclear waste repository. 
+
+# An Application of the Policy Learning Model 
+```{r, echo=FALSE, message=FALSE}
+### load data
+ymDat <- read.csv("ymData.csv")
+## recodes
+library(car)
+ymDat$ymPRE3 <- recode(ymDat$ymPRE, "1:2=-1;3:4=1")
+ymDat$ymPOST3 <- recode(ymDat$ymPOST, "1:2=-1;3:4=1")
+ymDat$ymLearn <- (ymDat$ymLV+ymDat$ymTRANS+ymDat$ymH2O+ymDat$ymRSK+ymDat$ymDRY+ymDat$ymCEN)/(6)
+ymDat$ymPRE3fact <- factor(ymDat$ymPRE3,
+labels=c("oppose","DK","support"))
+ymDat$ymPOST3fact <- factor(ymDat$ymPOST3,
+labels=c("oppose","DK","support"))
+ymDat$postSupportD <- ifelse(ymDat$ymPOST3==1,1,0)
+pre3tab <- as.data.frame(table(ymDat$ymPRE3fact))
+post3tab <- as.data.frame(table(ymDat$ymPOST3fact))
+```
+
+To apply the model of policy learning, I draw on a
+national survey that examined the public's views about Yucca Mountain,
+a proposed nuclear waste repository located 90 miles from Las Vegas,
+NV. The data was collected by Ipsos-Reid in March of
+2002 as the Bush administration was giving approval for Yucca Mountain
+[@nowlin_policy_2016].^[This data comes from a phone survey administered to a nationally representative sample of 1,000 adults living in the United States and is available through the Roper Center for Public Opinion Research, USIPSOSREID2002-093.]
+Respondents were asked about their support/opposition for the proposed
+facility after being given the following prompt: 
+
+> Recently, the Department of Energy and the Bush Administration
+> recommended that the Yucca Mountain site in Nevada be developed as
+> the nation’s first long-term geologic repository for high-level
+> radioactive waste. This means that all of the nation’s nuclear waste
+> would eventually be moved to and stored at Yucca Mountain. From what
+> you know or have heard, would you say that you strongly support,
+> somewhat support, somewhat oppose, or strongly oppose a nuclear
+> waste storage facility at Yucca Mountain, or do you not know enough
+> to say at this time? 
+
+\noindent For purposes of analysis, responses were recoded as -1 oppose, 0 don't
+know, and 1 support. Overall, the majority of respondents, `r pre3tab[2,2]` 
+or `r round(pre3tab[2,2]/(pre3tab[1,2]+pre3tab[2,2]+pre3tab[3,2])*100,2)`\%,
+indicated that they didn't know enough to say. About the same number
+of respondents indicated that they support Yucca Mountain,  `r pre3tab[3,2]`
+(`r round(pre3tab[3,2]/(pre3tab[3,2]+pre3tab[2,2]+pre3tab[3,2])*100,2)`\%)
+as those that opposed `r pre3tab[1,2]` 
+(`r round(pre3tab[1,2]/(pre3tab[3,2]+pre3tab[2,2]+pre3tab[3,2])*100,2)`\%).
+
+Following the initial support questions, respondents were given six
+facts about Yucca Mountain, with three facts having a negative frame
+(e.g., located 90 miles from Las Vegas) and three with a positive
+frame (e.g., dry climate and deep water table). After each statement
+respondents were asked whether that fact made them more or less likely
+to support / oppose Yucca Mountain. Responses were coded such that a
+-2 indicates much more likely to oppose, -1 somewhat more likely to
+oppose, 0 reflects does not make a
+difference, 1 somewhat more likely to support, and 2 indicates much more likely to support. The six
+questions were there averaged into an information weight scale, and
+the scale has a mean of `r round(mean(ymDat$ymLearn,na.rm=TRUE),3)`
+indicating that, overall, the information had a slightly negative
+weight. 
+
+Finally, respondents were asked their support for Yucca Mountain again
+and, post information 
+`r round(post3tab[3,2]/(post3tab[3,2]+post3tab[2,2]+post3tab[3,2])*100,2)`\%
+indicated their support, whereas 
+`r round(post3tab[1,2]/(post3tab[3,2]+post3tab[2,2]+post3tab[3,2])*100,2)`\%
+indicated opposition to Yucca Mountain. This data allows for a
+pre-and-post test to examine the influence of information on support
+for Yucca Mountain. In addition, it allows for an understanding of how
+information is weighted and its impacts on views about Yucca
+Mountain. Therefore, the data is useful for illustrating the
+logic of policy learning developed above. Figure \ref{fig:descript} show the
+pre-and-post information levels of support, as well as how each piece
+of information was weighted. 
+
+```{r, include=FALSE}
+## make descriptive plots or pre, info, and post
+preTab<-table(ymDat$ymPRE3)
+barplot(preTab, main="Pre-Opinion", names.arg=c("Oppose","Don't Know","Support"))
+infoData <- c(mean(ymDat$ymLV,na.rm=TRUE),mean(ymDat$ymTRANS,na.rm=TRUE),mean(ymDat$ymH2O,na.rm=TRUE),mean(ymDat$ymRSK,na.rm=TRUE),mean(ymDat$ymDRY,na.rm=TRUE),mean(ymDat$ymCEN,na.rm=TRUE))
+xAx <- c(-1,0,1)
+par(mar=c(5,10,4,4))
+infoPlot <- barplot(infoData, xlim=c(-1.25,1), horiz=TRUE,
+xlab="Information Weight", cex.lab=1.25)
+axis(1,at=xAx, labels=c("More likely to oppose","No Difference","More likely to support"), cex.axis=0.75)
+axis(2,at=infoPlot, labels=c("90 Miles from Vegas","Transported through\nyour State","Groundwater\nContamination","Waste Isolated","Dry Climate","One Storage Location"), las=2)
+abline(v=0, lwd=2)
+postTab<-table(ymDat$ymPOST3)
+barplot(postTab, main="Post-Opinion", names.arg=c("Oppose","Don't Know","Support"))
+```
+
+\begin{figure}
+\centering
+\caption{Prior and Post Views about Yucca Mountain and Information
+Weights \label{fig:descript}}
+\begin{subfigure}[a]{0.4\textwidth}
+\caption{Pre-Information \label{fig:descriptPre}}
+\includegraphics[width=\textwidth]{prePlot.pdf}
+\end{subfigure}
+\begin{subfigure}[a]{0.4\textwidth}
+\caption{Information Weights\label{fig:descriptInfo}}
+\includegraphics[width=\textwidth]{infoPlot.pdf}
+\end{subfigure}
+\begin{subfigure}[a]{0.4\textwidth}
+\caption{Post-Information \label{fig:descriptPost}}
+\includegraphics[width=\textwidth]{postPlot.pdf}
+\end{subfigure}
+\end{figure}
+
+As shown, a majority of respondents indicated prior to receiving
+information, that they didn't know to say whether they supported Yucca
+Mountain. In addition, on average respondents indicated that
+information with a negative frame made them less likely to support
+Yucca Mountain, whereas information with a positive frame made them
+more likely. The overall average negative weight of information can be
+attributed to the concern about groundwater contamination. Finally, as
+shown post-information support was somewhat polarized, but with more
+respondents indicating that they would support Yucca Mountain. Next, I
+examine factors that influence support for Yucca Mountain,
+pre-and-post, as well as how respondents weighted the information. 
+
+# Predicting Prior Beliefs, Information Weights, and Post Beliefs 
+```{r, include=FALSE}
+library(nnet)
+pre <- multinom(relevel(ymPRE3fact,
+ref="DK")~dem+rep+pres.approve+age+gend+white+edu+inc+ne+rural,
+data=ymDat, trace=FALSE)
+learn <- lm(ymLearn~dem+rep+pres.approve+age+gend+white+edu+inc+ne+rural+ymPRE3,
+data=ymDat)
+post1 <-
+glm(ymDat$postSupportD~dem+rep+pres.approve+age+gend+white+edu+inc+ne+rural+ymPRE3+ymLearn,
+family=binomial(), data=ymDat)
+post2 <- glm(ymDat$postSupportD~dem+rep+pres.approve+age+gend+white+edu+inc+ne+rural+ymPRE3*ymLearn, family=binomial(), data=ymDat)
+```
+<!-- tab:pre -->
+```{r, include=FALSE}
+library(stargazer)
+stargazer(pre, title="Multinominal Logit Estimates of Yucca Mountain Opinion Pre-Information", align=TRUE,
+dep.var.labels=c("Oppose","Support"),
+covariate.labels=c("Democrat","Republican","Pres. Approval","Age","Male","White","Education","Income","Northeast
+US","Rural"),star.cutoffs=c(0.05,0.01,0.001), label=c("tab:pre"),  no.space=TRUE, header=FALSE)
+```
+
+The first analysis is a multinomial logit model of prior support for
+the Yucca Mountain facility. In the absence of information and with a
+low salient issue, I expect prior support to be driven largely by deep
+core beliefs, such as party identification. Figure \ref{tab:pre}
+illustrates the results of the multinomial logit, with _don't know_ as
+the baseline category. 
+
+\begin{table}[!htbp] \centering 
+  \caption{Multinominal Logit of Yucca Mountain Opinion Pre-Information} 
+  \label{tab:pre} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Baseline Don't Know:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{1}{c}{Oppose} & \multicolumn{1}{c}{Support} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+\hline \\[-1.8ex] 
+ Democrat & 0.056 & 0.516 \\ 
+  & (0.257) & (0.376) \\ 
+  Republican & -0.457 & 1.178^{**} \\ 
+  & (0.287) & (0.374) \\ 
+  Pres. Approval & -0.130^{**} & 0.035 \\ 
+  & (0.047) & (0.060) \\ 
+  Age & 0.005 & 0.023^{***} \\ 
+  & (0.006) & (0.006) \\ 
+  Male & 0.241 & 1.354^{***} \\ 
+  & (0.174) & (0.188) \\ 
+  White & -0.197 & 0.467 \\ 
+  & (0.247) & (0.338) \\ 
+  Education & 0.115 & 0.235^{***} \\ 
+  & (0.062) & (0.064) \\ 
+  Income & -0.019 & 0.068 \\ 
+  & (0.039) & (0.042) \\ 
+  Northeast
+US & -0.175 & -0.228 \\ 
+  & (0.212) & (0.230) \\ 
+  Rural & -0.275 & -0.069 \\ 
+  & (0.203) & (0.207) \\ 
+  Constant & -0.354 & -5.230^{***} \\ 
+  & (0.502) & (0.700) \\ 
+ \hline \\[-1.8ex] 
+Akaike Inf. Crit. & \multicolumn{1}{c}{1,690.944} & \multicolumn{1}{c}{1,690.944} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.05; $^{**}$p$<$0.01; $^{***}$p$<$0.001} \\ 
+\end{tabular} 
+\end{table} 
+
+As shown, as support for President George W. Bush increases, the
+likelihood of opposing Yucca Mountain decreases. In addition and as
+expected, Republican respondents are more likely to support Yucca
+Mountain than independents and Democrats. Finally, older, male, and
+more educated respondents also indicated support for Yucca Mountain
+prior to receiving information. Next, I use OLS to predict the weights
+given to the information, followed by logit models to predict support
+post-information. 
+
+<!-- tab:learn -->
+```{r, include=FALSE}
+stargazer(learn,post1,post2, title="Public
+Opinion about Yucca Mountain: Information Weight and Post Information Support", align=TRUE,
+dep.var.labels=c("Info. Weight","Post-Opinion"),
+covariate.labels=c("Democrat","Republican","Pres. Approval","Age","Male","White","Education","Income","Northeast
+US","Rural","Pre-Opinion","Info. Weight","Pre-Opinion*Info. Weight"),omit.stat=c("rsq","ser","f"),
+star.cutoffs=c(0.05,0.01,0.001), label=c("tab:learn"), font.size="small", no.space=TRUE, header=FALSE)
+```
+
+As discussed above, following each factual statement about Yucca
+Mountain respondents were asked whether that information made them
+more or less likely to support Yucca Mountain. Responses were coded as
+-2 = much less likely to support to 2 = much more likely to support,
+with responses of -2 or -1 considered to be a negative weight on the
+information and responses of 1 or 2 considered a positive
+weight.^[A 0 indicates no change in support.]. The average of
+responses for each item is used as the information weight variable in
+the models. 
+
+I expect that deep core beliefs will drive the weighting of
+information, with Republicans being likely to apply a
+positive weight to the information, whereas Democrats would apply a
+negative weight. In addition, I expect the prior opinion to impact the
+ways in which information is weighted, which those more supportive of
+Yucca Mountain likely to place a positive weight on information. 
+
+In addition to the weighting of information, I also examined the
+support for Yucca Mountain following the information. Support for
+Yucca Mountain is a dummy variable with 1 indicating support, and 0
+indicating opposition or don't know. I expect post-support for Yucca
+Mountain to be driven by deep core beliefs, the weighting of
+information (with a increasingly positive weight associated with an
+increased likelihood of support), prior support, and an interaction
+between prior support and the information weight. Table
+\ref{tab:learn} presents the results of the OLS and logit analysis. 
+
+\begin{table}[!htbp] \centering 
+  \caption{Public
+Opinion about Yucca Mountain: Information Weight and Post Information Support} 
+  \label{tab:learn} 
+\small 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{1}{c}{Info. Weight} & \multicolumn{2}{c}{Post-Opinion} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{\textit{OLS}} & \multicolumn{2}{c}{\textit{logistic}} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ Democrat & 0.029 & 0.120 & 0.147 \\ 
+  & (0.100) & (0.400) & (0.403) \\ 
+  Republican & 0.218^{*} & 0.528 & 0.505 \\ 
+  & (0.105) & (0.420) & (0.423) \\ 
+  Pres. Approval & 0.057^{***} & 0.149^{*} & 0.156^{*} \\ 
+  & (0.017) & (0.071) & (0.072) \\ 
+  Age & 0.004^{*} & 0.004 & 0.003 \\ 
+  & (0.002) & (0.008) & (0.008) \\ 
+  Male & 0.213^{***} & 0.213 & 0.176 \\ 
+  & (0.058) & (0.242) & (0.244) \\ 
+  White & 0.260^{**} & -0.783^{*} & -0.767^{*} \\ 
+  & (0.091) & (0.377) & (0.370) \\ 
+  Education & 0.034 & 0.0003 & -0.018 \\ 
+  & (0.021) & (0.089) & (0.090) \\ 
+  Income & -0.003 & 0.009 & 0.009 \\ 
+  & (0.013) & (0.056) & (0.057) \\ 
+  Northeast
+US & -0.054 & 0.128 & 0.155 \\ 
+  & (0.071) & (0.293) & (0.296) \\ 
+  Rural & -0.025 & 0.189 & 0.176 \\ 
+  & (0.066) & (0.279) & (0.280) \\ 
+  Pre-Opinion & 0.753^{***} & 0.928^{***} & 1.078^{***} \\ 
+  & (0.043) & (0.211) & (0.227) \\ 
+  Info. Weight &  & 2.651^{***} & 2.802^{***} \\ 
+  &  & (0.223) & (0.245) \\ 
+  Pre-Opinion*Info. Weight &  &  & 0.951^{*} \\ 
+  &  &  & (0.370) \\ 
+  Constant & -1.131^{***} & -0.370 & -0.334 \\ 
+  & (0.180) & (0.758) & (0.762) \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{777} & \multicolumn{1}{c}{773} & \multicolumn{1}{c}{773} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.414} &  &  \\ 
+Log Likelihood &  & \multicolumn{1}{c}{-231.456} & \multicolumn{1}{c}{-228.111} \\ 
+Akaike Inf. Crit. &  & \multicolumn{1}{c}{488.912} & \multicolumn{1}{c}{484.222} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.05; $^{**}$p$<$0.01; $^{***}$p$<$0.001} \\ 
+\end{tabular} 
+\end{table} 
+
+
+Table \ref{tab:learn} shows the results of the analysis predicting
+information weight as well as support for Yucca Mountain following the
+receipt of information. As expected, Republicans and those with higher
+levels of approval for President Bush were more likely than other to
+attached an overall positive weight to the information. In addition,
+those that were more supportive of Yucca Mountain prior to information
+were also more likely to weight the information as more
+positive. Next, we see that, all else equal, as approval for President
+Bush increased so did the likelihood of support for Yucca Mountain
+following the provision of information. In addition, previous opinion
+and the weight of information had significant impacts on the
+support. Finally, the interaction between prior opinion and is
+positive and significant. Figure \ref{fig:pred} illustrates the
+predicted probabilities of Yucca Mountain support by prior support and
+information weight. 
+
+<!-- fig:postModelPlot -->
+```{r, include=FALSE}
+ymPreSup <- data.frame(dem=mean(ymDat$dem, na.rm=T),
+                                           rep=mean(ymDat$rep, na.rm=T),           pres.approve=mean(ymDat$pres.approve,                                                        na.rm=T),
+                                           age=mean(ymDat$age,na.rm=T),
+                       gend=mean(ymDat$gend,na.rm=T),
+                       white=mean(ymDat$white,na.rm=T),
+                                           edu=mean(ymDat$edu,na.rm=T),
+                       inc=mean(ymDat$inc,na.rm=T),
+                       ne=mean(ymDat$ne,na.rm=T),
+                       rural=mean(ymDat$rural,na.rm=T),
+                       ymPRE3=1,
+                       ymLearn=-2:2)
+ymPreDK <- data.frame(dem=mean(ymDat$dem, na.rm=T),
+                                           rep=mean(ymDat$rep, na.rm=T),                                   pres.approve=mean(ymDat$pres.approve,                                                        na.rm=T),
+                                           age=mean(ymDat$age,na.rm=T),
+                       gend=mean(ymDat$gend,na.rm=T),
+                       white=mean(ymDat$white,na.rm=T),
+                                           edu=mean(ymDat$edu,na.rm=T),
+                       inc=mean(ymDat$inc,na.rm=T),
+                       ne=mean(ymDat$ne,na.rm=T),
+                       rural=mean(ymDat$rural,na.rm=T),
+                       ymPRE3=0,
+                       ymLearn=-2:2)
+ymPreOppose <- data.frame(dem=mean(ymDat$dem, na.rm=T),
+                                           rep=mean(ymDat$rep, na.rm=T),
+                                pres.approve=mean(ymDat$pres.approve,                                                   na.rm=T),
+                                           age=mean(ymDat$age,na.rm=T),
+                       gend=mean(ymDat$gend,na.rm=T),
+                       white=mean(ymDat$white,na.rm=T),
+                                           edu=mean(ymDat$edu,na.rm=T),
+                       inc=mean(ymDat$inc,na.rm=T),
+                       ne=mean(ymDat$ne,na.rm=T),
+                       rural=mean(ymDat$rural,na.rm=T),
+                       ymPRE3=-1,
+                       ymLearn=-2:2)
+predsPreSup <- predict(post2, newdata=ymPreSup, se.fit=T, type="link")
+predsPreDK <- predict(post2, newdata=ymPreDK, se.fit=T, type="link")
+predsPreOppose <- predict(post2, newdata=ymPreOppose, se.fit=T, type="link")
+plot(plogis(predsPreSup[["fit"]]) ~ ymPreSup[["ymLearn"]], type = "n", yaxt="n", main="", xlab = "", ylab = "", ylim=c(0,1))
+axis(2, cex.axis=1)
+mtext("p(Yucca Mountain Support)", side=2, line=2.2, cex=1.25)
+mtext("Information Weight", side=1, line=2.2, cex=1.25)
+polygon(c(ymPreSup[["ymLearn"]],rev(ymPreSup[["ymLearn"]])),c(plogis(with(predsPreSup, fit - 1.96*se.fit)), rev(plogis(with(predsPreSup, fit + 1.96*se.fit)))), col="grey90")
+lines(plogis(predsPreSup[["fit"]]) ~ ymPreSup[["ymLearn"]], lwd=2, lty = 2)
+polygon(c(ymPreDK[["ymLearn"]],rev(ymPreDK[["ymLearn"]])),c(plogis(with(predsPreDK, fit - 1.96*se.fit)), rev(plogis(with(predsPreDK, fit + 1.96*se.fit)))), col="grey50")
+lines(plogis(predsPreDK[["fit"]]) ~ ymPreDK[["ymLearn"]], lwd=2, lty = 2)
+polygon(c(ymPreOppose[["ymLearn"]],rev(ymPreOppose[["ymLearn"]])),c(plogis(with(predsPreOppose, fit - 1.96*se.fit)), rev(plogis(with(predsPreOppose, fit + 1.96*se.fit)))), col="grey20")
+lines(plogis(predsPreOppose[["fit"]]) ~ ymPreOppose[["ymLearn"]], lwd=2, lty = 2)
+legend("topleft", c("Pre-Support","Pre-Don't Know","Pre-Oppose"), lty=2,lwd=2,col=c("grey80","grey50","grey20"),bty="n", cex=1.25)
+```
+
+\begin{figure}
+\centering
+\caption{Predicted Probabilities of Yucca Mountain Support
+\label{fig:pred}}
+\includegraphics[width=\textwidth]{postModelPlot.pdf}
+\end{figure}
+
+As can be seen in Figure \ref{fig:pred}, the _S_-curve associated with
+respondents that supported Yucca Mountain prior to information is
+steeper than the other categories of pre-opinion. This indicates that,
+as we would expect, information does not need to be weighted as much
+for those that already supportive. Comparing the _S_-curve of those
+that initially opposed Yucca Mountain, we see how much more positive
+the information needed to be weighted to make support more likely. 
+
+# Discussion and Conclusion
+
+# Discussion and Conclusion
+
+<!-- discussion how the results show biased, not pure bayesian --> 
+This paper presented a model of policy learning based in a Bayesian
+framework. In brief, the model proposes that learning can be
+understood as a change in policy beliefs based on the processing of
+information. To understand the nature of belief change, I proposed a
+Bayesian framework that incorporates prior beliefs, likelihood weights
+of information, and posterior beliefs. Learning occurs as posterior
+beliefs shift significantly from prior beliefs in the direction of the
+information. The underlying logic of model associates the potential
+for learning as a function of the strength of the prior belief and the
+strength of weight placed on the information signal. 
+
+Using public opinion from 2002 about Yucca Mountain as a potential
+nuclear waste repository, I demonstrated the potential utility of the
+learning model. The results showed that respondents drew on core
+beliefs (partisanship) when developing priors and weighting
+information. In addition, respondents drew on prior beliefs and
+the weight given to various pieces of information when determining
+posterior opinions about Yucca Mountain. These results demonstrate
+that respondents did not learn according to the linear model, nor were
+respondents effective Bayesians. Respondents were subject to the
+biases of anchoring based on their priors and in over/under weighting
+information based on core beliefs. 
+
+<!-- discussion applications to different types of learning (bennett -->
+<!-- and howlett; objects of learning --> 
+
+The intention of this model is that it is general and applicable to a
+variety of situations. Policy related beliefs cover a range of
+potential application such as 
+attributes of policy issues and debates including how an issue is
+defined; the nature and severity of a particular problem; the
+appropriate policy tools; and the appropriate mechanisms of
+implementation among other potential attributes. In addition, this
+model could be applicable to various types of learning such as
+"government learning", "lesson-drawing", and "social-learning"
+[@bennett_lessons_1992]. Finally, empirical measures could come from
+stakeholder surveys as well as the increasing number of policy
+documents that are digitized and archived. The increasing
+sophistication of text analysis allows for new approaches to analysis
+policy documents to test hypotheses generated from the model presented in this paper. 
+
+
+\newpage
+
+# References 
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.2in}
+\singlespace
+\noindent
